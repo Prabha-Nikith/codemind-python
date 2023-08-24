@@ -1,16 +1,11 @@
-def is_perfect(n):
-    sum = 1
-    i = 2
-    while i * i <= n:
-        if n % i:
-            i += 1
-        else:
-            if i * (n // i) == n:
-                sum = sum + i + n//i
-            i += 1
-    return sum == n and n!=1
-number = int(input())
-if is_perfect(number):
+n=int(input())
+s=0
+i=1
+while(i<=n/2):
+    if(n%i==0):
+        s=s+i
+    i+=1
+if(s==n):
     print(True)
 else:
     print(False)
